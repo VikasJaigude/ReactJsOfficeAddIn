@@ -2,6 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const myParam = urlParams.get('itemId');
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +20,7 @@ function App() {
         >
           Learn React
         </a>
+        {myParam ? <h1>Query string received</h1>: null}
       </header>
     </div>
   );
