@@ -13,7 +13,7 @@ Office.onReady(() => {
  * Shows a notification when the add-in command is executed.
  * @param event {Office.AddinCommands.Event}
  */
-function action(event) {
+function lauchApp(event) {
     var contextInfo = Office.context.diagnostics;
     if (contextInfo.platform=="OfficeOnline")
     {
@@ -26,7 +26,7 @@ function action(event) {
     }
 }
 
-function redistribute(event) {
+function redistributeMail(event) {
     var item = Office.context.mailbox.item;
     var contextInfo = Office.context.diagnostics;
     if (contextInfo.platform=="OfficeOnline")
